@@ -147,7 +147,7 @@ spec:
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Allow
-  host: nettool1.apps-crc.testing
+  host: nettool1.apps.openshift.hauajoe.eu
   port:
     targetPort: 1180    
 ---      
@@ -165,7 +165,7 @@ spec:
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Allow
-  host: nettool2.apps-crc.testing
+  host: nettool2.apps.openshift.hauajoe.eu
   port:
     targetPort: 1180   
 ---      
@@ -183,6 +183,6 @@ spec:
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Allow
-  host: nettool3.apps-crc.testing
+  host: nettool3.apps.openshift.hauajoe.eu
   port:
     targetPort: 1180 
