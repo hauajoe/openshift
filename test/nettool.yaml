@@ -37,7 +37,7 @@ spec:
     spec:
       containers:
         - name: nettool1
-          image: 'github.com/praqma/network-multitool:openshift'
+          image: 'wbitt/Network-Multitool:openshift'
           ports:
             - containerPort: 1180
               protocol: TCP
@@ -60,7 +60,7 @@ spec:
     spec:
       containers:
         - name: nettool2
-          image: 'github.com/praqma/network-multitool:openshift'
+          image: 'wbitt/Network-Multitool:openshift'
           ports:
             - containerPort: 1180
               protocol: TCP
@@ -83,7 +83,7 @@ spec:
     spec:
       containers:
         - name: nettool3
-          image: 'github.com/praqma/network-multitool:openshift'
+          image: 'wbitt/Network-Multitool:openshift'
           ports:
             - containerPort: 1180
               protocol: TCP              
