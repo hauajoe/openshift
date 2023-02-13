@@ -37,7 +37,7 @@ spec:
     spec:
       containers:
         - name: nettool1
-          image: 'wbitt/Network-Multitool:openshift-extra'
+          image: 'wbitt/network-multitool:openshift-extra'
           ports:
             - containerPort: 1180
               protocol: TCP
@@ -60,7 +60,7 @@ spec:
     spec:
       containers:
         - name: nettool2
-          image: 'wbitt/Network-Multitool:openshift-extra'
+          image: 'wbitt/network-multitool:openshift-extra'
           ports:
             - containerPort: 1180
               protocol: TCP
@@ -83,7 +83,7 @@ spec:
     spec:
       containers:
         - name: nettool3
-          image: 'wbitt/Network-Multitool:openshift-extra'
+          image: 'wbitt/network-multitool:openshift-extra'
           ports:
             - containerPort: 1180
               protocol: TCP              
