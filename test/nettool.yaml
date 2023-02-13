@@ -37,7 +37,7 @@ spec:
     spec:
       containers:
         - name: nettool1
-          image: 'wbitt/Network-Multitool:openshift'
+          image: 'docker.io/wbitt/Network-Multitool:openshift'
           ports:
             - containerPort: 1180
               protocol: TCP
