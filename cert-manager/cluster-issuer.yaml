@@ -1,17 +1,15 @@
-apiVersion: v1
-items:
-- apiVersion: cert-manager.io/v1
-  kind: ClusterIssuer
-  metadata:
-    annotations:
-    name: letsencrypt-prod
-  spec:
-    acme:
-      email: johannes_hauer@mailbox.org
-      preferredChain: ""
-      privateKeySecretRef:
-        name: letsencrypt-prod
-      server: https://acme-v02.api.letsencrypt.org/directory
-      solvers:
-      - http01:
-          ingress: {}
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  annotations:
+  name: letsencrypt-prod
+spec:
+  acme:
+    email: johannes_hauer@mailbox.org
+    preferredChain: ""
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    server: https://acme-v02.api.letsencrypt.org/directory
+    solvers:
+    - http01:
+        ingress: {}
