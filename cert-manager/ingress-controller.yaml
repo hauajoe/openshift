@@ -1,0 +1,21 @@
+apiVersion: v1
+items:
+- apiVersion: operator.openshift.io/v1
+  kind: IngressController
+  metadata:
+    name: ingress-controller-direct
+    namespace: openshift-ingress-operator
+  spec:
+    domain: hauajoe.eu
+    nodePlacement:
+      nodeSelector:
+        matchLabels:
+          node-role.kubernetes.io/worker: ""
+    routeSelector:
+      matchLabels:
+        type: direct
+  status: {}
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
