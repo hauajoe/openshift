@@ -33,3 +33,20 @@ spec:
     nodePort: 30300
   selector:
     k8s-app: jitsi
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+  annotations:
+    cert-manager.io/issuer-kind: ClusterIssuer
+    cert-manager.io/issuer-name: letsencrypt-prod
+metadata:
+  name: jitsi
+  namespace: jitsi
+spec:
+  host: jitsi.hauajoe.eu
+  path: /
+  to:
+    kind: Service
+    name: web
+  port:
+    targetPort: 80
