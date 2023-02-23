@@ -112,6 +112,8 @@ spec:
               value: America/Los_Angeles
             - name: JVB_TCP_HARVESTER_DISABLED
               value: "true"
+            - name: PUBLIC_URL
+              value: "https://jitsi.hauajoe.eu"
         - name: jvb
           image: jitsi/jvb:stable-6826
           imagePullPolicy: IfNotPresent
