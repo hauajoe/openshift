@@ -36,9 +36,9 @@ spec:
 ---
 apiVersion: route.openshift.io/v1
 kind: Route
-  annotations:
-    cert-manager.io/issuer-kind: ClusterIssuer
-    cert-manager.io/issuer-name: letsencrypt-prod
+annotations:
+  cert-manager.io/issuer-kind: ClusterIssuer
+  cert-manager.io/issuer-name: letsencrypt-prod
 metadata:
   name: jitsi
   namespace: jitsi
