@@ -1,0 +1,23 @@
+apiVersion: apps.jit.si/v1alpha1
+kind: Jitsi
+metadata:
+  name: jitsi-instance
+  namespace: 
+spec:
+  domain: jitsi.hauajoe.eu
+  region: europe
+  timezone: Europe/Vienna
+  image:
+    registry: "$BASE_REPO"
+    pullPolicy: IfNotPresent
+  ingress:
+    enabled: false
+  jvb:
+    strategy:
+      type: autoscaled
+      replicas: 1
+      maxReplicas: 2
+  jibri:
+    enabled: false
+  variables:
+    JVB_ADVERTISE_IPS: "$LOCAL_IP"
