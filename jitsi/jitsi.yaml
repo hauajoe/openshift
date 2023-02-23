@@ -2,7 +2,7 @@ apiVersion: apps.jit.si/v1alpha1
 kind: Jitsi
 metadata:
   name: jitsi-instance
-  namespace: 
+  namespace: jitsi-operator-system 
 spec:
   domain: jitsi.hauajoe.eu
   region: europe
