@@ -18,13 +18,13 @@ spec:
         slaves: 
         - enp6s18
         - enp6s19
-#    - name: br1
-#      description: Linux bridge on bond
-#      type: linux-bridge
-#      state: up
-#      bridge:
-#        port:
-#        - name: bond0        
-#      ipv4:
-#        dhcp: true 
-#        enabled: true 
+    - name: br1
+      description: Linux bridge on bond
+      type: linux-bridge
+      state: up
+      bridge:
+        port:
+        - name: bond0        
+      ipv4:
+        dhcp: true 
+        enabled: true 
