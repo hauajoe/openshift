@@ -13,9 +13,6 @@ spec:
       description: Bond enslaving enp6s18 and enp6s19 
       type: bond 
       state: up 
-      ipv4:
-        dhcp: true 
-        enabled: true 
       link-aggregation:
         mode: active-backup 
         slaves: 
