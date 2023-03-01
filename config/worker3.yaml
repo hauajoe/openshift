@@ -1,0 +1,33 @@
+apiVersion: nmstate.io/v1
+kind: NodeNetworkConfigurationPolicy
+metadata:
+  name: bond0-enp6s18-enp6s19-worker2-policy
+  labels:
+    app.kubernetes.io/instance: clusterconfig 
+spec:
+  nodeSelector: 
+    kubernetes.io/hostname: worker3
+  desiredState:
+    interfaces:
+    - name: bond0
+      description: Bond enslaving enp6s18 and enp6s19 
+      type: bond 
+      state: up 
+      ipv4:
+        dhcp: true 
+        enabled: true 
+      link-aggregation:
+        mode: active-backup 
+        slaves: 
+        - enp6s18
+        - enp6s19
+#    - name: br1
+#      description: Linux bridge on bond
+#      type: linux-bridge
+#      state: up
+#      bridge:
+#        port:
+#        - name: bond0        
+#      ipv4:
+#        dhcp: true 
+#        enabled: true 
