@@ -15,13 +15,16 @@ spec:
       state: up 
       link-aggregation:
         mode: active-backup 
-        slaves: 
+        port: 
         - enp6s18
         - enp6s19
-    - name: br1
-      description: Linux bridge on bond
-      type: linux-bridge
-      state: up
-      bridge:
-        port:
-        - name: bond0        
+      ipv6:
+        dhcp: true
+        enabled: true
+#    - name: br1
+#      description: Linux bridge on bond
+#      type: linux-bridge
+#      state: up
+#      bridge:
+#        port:
+#        - name: bond0        
